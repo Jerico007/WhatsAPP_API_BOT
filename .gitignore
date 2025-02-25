@@ -1,0 +1,10 @@
+# Node.js dependencies
+node_modules/
+.env
+
+# # WhatsApp session files
+# auth_info/
+
+# Logs and cache
+*.log
+*.cache
