@@ -6,6 +6,7 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
+const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 3000;
 const API_KEY = process.env.API_KEY || 'your-secure-api-key';
 
 app.use(bodyParser.json());
+app.use(cors({ origin: '*', methods: 'GET,HEAD,PUT,PATCH,POST,DELETE' }));
 
 // Multer setup for file uploads
 const upload = multer({ dest: 'uploads/' });
